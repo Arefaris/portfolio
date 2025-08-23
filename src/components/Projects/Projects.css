@@ -1,0 +1,156 @@
+.projects-section {
+	background: #ffffff;
+	padding: 80px 0;
+}
+
+.projects-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.projects-container h2 {
+	font-size: 2.5rem;
+	color: #2c3e50;
+	text-align: center;
+	margin-bottom: 3rem;
+	position: relative;
+}
+
+.projects-container h2::after {
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 4px;
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	border-radius: 2px;
+}
+
+.projects-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: 2rem;
+	margin-top: 4rem;
+}
+
+.project-card {
+	background: white;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	transition: all 0.3s ease;
+	border: 1px solid #e8e8e8;
+}
+
+.project-card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+	border-color: #667eea;
+}
+
+.project-content {
+	padding: 2rem;
+}
+
+.project-content h3 {
+	font-size: 1.5rem;
+	color: #2c3e50;
+	margin-bottom: 1rem;
+	font-weight: 600;
+}
+
+.project-content p {
+	color: #666;
+	line-height: 1.6;
+	margin-bottom: 1.5rem;
+	font-size: 1rem;
+}
+
+.technologies {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-bottom: 2rem;
+}
+
+.tech-tag {
+	color: #5A8AF0;
+	padding: 0.3rem 0.8rem;
+	border-radius: 15px;
+	font-size: 0.8rem;
+	font-weight: 500;
+	transition: all 0.3s ease;
+  	line-height: 1.25rem;
+	background-color: #E9EFFD;
+
+}
+
+.tech-tag:hover {
+	transform: scale(1.05);
+}
+
+.project-links {
+	display: flex;
+	gap: 1rem;
+}
+
+.github-link {
+	color: #5A8AF0;
+	border: solid 1px ;
+	text-decoration: none;
+	padding: 0.8rem 1.5rem;
+	border-radius: 25px;
+	font-weight: 500;
+	transition: all 0.3s ease;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.github-link:hover {
+	transform: translateX(5px);
+	box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+	.projects-grid {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+	
+	.project-content {
+		padding: 1.5rem;
+	}
+	
+	.project-content h3 {
+		font-size: 1.3rem;
+	}
+	
+	.project-content p {
+		font-size: 0.95rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.projects-container h2 {
+		font-size: 2rem;
+	}
+	
+	.project-content {
+		padding: 1rem;
+	}
+	
+	.tech-tag {
+		font-size: 0.75rem;
+		padding: 0.25rem 0.6rem;
+	}
+	
+	.github-link {
+		padding: 0.6rem 1.2rem;
+		font-size: 0.9rem;
+	}
+}
