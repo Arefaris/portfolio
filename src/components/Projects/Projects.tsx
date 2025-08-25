@@ -21,8 +21,17 @@ const ProjectCard = ({ project }: { project: Project }) => {
 						rel="noopener noreferrer"
 						className="github-link"
 					>
-						View on GitHub →
+						GitHub →
 					</a>
+					{project.liveDemo &&	
+						<a 
+						href={project.liveDemo} 
+						target="_blank" 
+						rel="noopener noreferrer"
+						className="github-link"
+					>
+						Live demo →
+					</a>}
 				</div>
 			</div>
 		</div>

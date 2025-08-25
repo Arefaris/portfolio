@@ -5,6 +5,7 @@ export interface Project {
 	title: string
 	description: string
 	githubUrl: string
+	liveDemo?: string
 	technologies: string[]
 }
 
@@ -22,6 +23,7 @@ const usePortfolioStore = create<PortfolioState>((set) => ({
 			title: 'SmartTrip',
 			description: 'A travel planning application with AI-powered trip generation. Features user authentication, trip planning with budget and date selection, and responsive design using React, TypeScript, and Zustand.',
 			githubUrl: 'https://github.com/Arefaris/SmartTrip.git',
+			liveDemo: "https://smart-trip.cc/",
 			technologies: ['React', 'TypeScript', 'Zustand', 'Node.js', 'Express', 'PostgreSQL']
 		},
 		{
@@ -36,6 +38,7 @@ const usePortfolioStore = create<PortfolioState>((set) => ({
 			title: 'Book Recommendation App',
 			description: 'A web application that provides personalized book recommendations using AI. Integrates with Open Library API to fetch book details and covers, featuring responsive design and real-time search.',
 			githubUrl: 'https://github.com/Arefaris/vigilant-octo-journey.git',
+			liveDemo: "https://nextbookread.netlify.app/",
 			technologies: ['TypeScript', 'Vite', 'OpenAI API', 'Open Library API']
 		},
 		{
